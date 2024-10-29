@@ -62,12 +62,14 @@ void book::display(node*r1){
         for(i=0;i<tchapters;i++){
             cout<<"\nchapter no:-"<<i+1<<endl;
             cout<<r1->child[i]->label;
-            cout<<"\nsection :-";
+            
             for(j=0;j<r1->child[i]->count;j++){
-                cout<<r1->child[i]->child[j]->label;
-
+                cout<<"\nsection :-";
+                cout<<r1->child[i]->child[j]->label<<endl;
+                
                 for(k=0;k<r1->child[i]->count;k++){
-                cout<<r1->child[i]->child[j]->child[k]->label;
+                    cout<<"\nsubsection :-";
+                    cout<<r1->child[i]->child[j]->child[k]->label<<endl;
             }
             }
         }
